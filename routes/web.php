@@ -17,4 +17,5 @@ Route::get('/', function () {
 
 Route::get('/sp','SpiderController@start');
 Route::get('/url','UrlController@getUrl');
+Route::get('/demo','DemoController@getadminimg');
 
