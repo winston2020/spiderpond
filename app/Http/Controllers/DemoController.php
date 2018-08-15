@@ -14,28 +14,29 @@ class DemoController extends Controller
 {
     function start(){
         echo '正在读取URL'.'<br>';
-        $data = file(public_path('url/url.txt'));
+        $data = file(public_path('url/北部青旅.txt'));
 //        dd($data);
         $i = 0;
         foreach ($data as $url) {
             $i++;
 //            dd($this->getadmin());
-            $this->getadminimg($url);
-            return;
+
             echo '开始爬取:'.$url.'<br>';
             $client = new client();
             $http = $client->request('GET',$url);
             echo '已获取网页内容'.'<br>';
             $ta = mb_convert_encoding($http->getBody()->getContents(),'utf-8','GBK,UTF-8,ASCII');
-            dd($this->getadmin($ta));
-            $this->getdes($ta);
+//            dd($this->getadmindesc($ta));
+//            $this->getadmin($ta);
+//            $this->getadminimg($url);
+//            $this->getdes($ta);
             $t = $this->getbody($ta);
             $title = $this->gettitle($ta);
             $body = $this->chuli($t);
-            $text = $title."######".$body.chr(13).chr(10);
+            $text = $title."##########".$body.chr(13).chr(10);
 //        $ceshi = "换行测试".chr(13).chr(10)."第二行测试";
             echo '网页爬取成功,写入文档.'.'<br>';
-            $file = @fopen('demo.txt','a');
+            $file = @fopen('qinglv.txt','a');
             fwrite($file,$text);
             fclose($file);
             echo '第'.$i.'个网页成功写入'.'<br>';
@@ -90,12 +91,11 @@ class DemoController extends Controller
     //获取用户的头像和专属背景
     function getadminimg(){
         $url = "https://yjlr520.tian.yam.com/posts/222156503";
-        $str = substr($url,strpos($url,'https://'));
-        $name = substr($str,0,strpos($str,'.')+1);
+        $imgs = array("","");
         $content = file_get_contents($url);
         preg_match_all("<img src=\"(.*?).jpg\">",$content,$matches);
         $path = base_path();
-
+        $i = 0;
         foreach ($matches as $match) {
             foreach ($match as $value){
                 if (strpos($value,'img src="')!==false){
@@ -103,16 +103,27 @@ class DemoController extends Controller
                     $value = str_replace("\"","",$value);
                     $img = file_get_contents($value);
                     file_put_contents($path.'/public/img/'.basename($value),$img);
-                    return basename($value);
+                    $imgs[$i] = basename($value);
+                    $i++;
                 }
             }
         }
-        return 'OK';
+        //0为背景,1为头像,返回的都是名字
+        return $imgs;
     }
 
+    //
     function getcover($body){
-        
+
     }
+
+    //获取作者签名
+    function getadmindesc($html){
+        $str = substr($html,strpos($html,'<div class="txt-des">')+21);
+        $admindesc = substr($str,0,strpos($str,'</div>'));
+        return $admindesc;
+    }
+
 
 
     //
