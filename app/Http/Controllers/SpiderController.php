@@ -15,7 +15,7 @@ class SpiderController extends Controller
 {
     function start(){
         echo '正在读取URL'.'<br>';
-        $data = file(public_path('url/咖啡轻食.txt'));
+        $data = file(public_path('url/精选文章.txt'));
 //        dd($data);
         $i = 0;
 
@@ -31,7 +31,7 @@ class SpiderController extends Controller
             //文章内容，未处理
             $t = $this->getbody($ta);
             try{
-                $active->typeid = 2;
+                $active->typeid = 9;
                 //文章标题
                 $active->title = $this->gettitle($ta);
                 //作者名
@@ -42,15 +42,15 @@ class SpiderController extends Controller
                 //文章内容
                 $active->content = $this->chuli($t);
                 $active->volume = rand(1000,9999);
-                $active->type = '咖啡轻食';
+                $active->type = '精选文章';
                 $if = $active->save();
                 if ($if){
-                    echo $url.'插入数据库成功';
+                    echo $url.'插入数据库成功'.'<br>';
                 }else{
-                    echo $url.'不明原因失败';
+                    echo $url.'不明原因失败'.'<br>';
                 }
             }catch (\Exception $e){
-                echo $url.'跳过';
+                echo $url.'跳过'.'<br>';
             }
 //            //作者签名
 //            $this->getadmindesc($ta);

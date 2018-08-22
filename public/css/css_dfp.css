@@ -1,0 +1,15 @@
+.ad-parent-block {
+    text-align: center;
+    font-size: 0;
+}
+.ad-inline-block {
+    width: 50%;
+    display: inline-block;
+}
+
+.ad-inline-block > *{
+    margin: 10px auto;
+}
+.mobile-ad-block-bg {
+    background-color: #DDD;
+}
