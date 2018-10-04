@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Active;
+use App\Content;
 use function GuzzleHttp\Psr7\str;
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
@@ -22,7 +23,7 @@ class SpiderController extends Controller
         foreach ($data as $url) {
             $i++;
 //            dd($this->getadmin());
-            $active = new Active();
+            $content = new Content();
             echo '开始爬取:'.$url.'<br>';
             $client = new client();
             $http = $client->request('GET',$url);
@@ -31,19 +32,16 @@ class SpiderController extends Controller
             //文章内容，未处理
             $t = $this->getbody($ta);
             try{
-                $active->typeid = 9;
-                //文章标题
-                $active->title = $this->gettitle($ta);
-                //作者名
-                $active->admin = $this->getadmin($ta);
-                //文章描述
-                $active->desc = $this->getdes($ta);
-                $active->cover = '';
-                //文章内容
-                $active->content = $this->chuli($t);
-                $active->volume = rand(1000,9999);
-                $active->type = '精选文章';
-                $if = $active->save();
+                $content->title = $this->gettitle($ta);
+                $content->created_at = date('Y-m-d H:i:s');
+                $content->updated_at = date('Y-m-d H:i:s');
+                $content->webid = 1;
+                $content->author = 'xx';
+                $content->href = 'xx';
+                $content->keywords = 'xx';
+                $content->content = $this->chuli($t);
+
+                $if = $content->save();
                 if ($if){
                     echo $url.'插入数据库成功'.'<br>';
                 }else{

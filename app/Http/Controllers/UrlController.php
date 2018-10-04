@@ -23,6 +23,7 @@ class UrlController extends Controller
             @$dom->loadHTML($html);
 //            print ($html.$i);
             $xpath = new \DOMXPath($dom);
+            dd($xpath);
             $hrefs = $xpath->evaluate('/html/body//a');
 //        dd($hrefs->length);
             for ($j = 0; $j < $hrefs->length; $j++) {

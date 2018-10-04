@@ -23,18 +23,19 @@
 //}
 
 //Route::get('/sp','SpiderController@start');
-//Route::get('/url','UrlController@getUrl');
+Route::get('/geturl','UrlController@getUrl');
+Route::get('/url','UrlController@getUrl');
 //Route::get('/demo','DemoController@start');
-Route::domain('localhost')->group(function (){
-    Route::get('/','HomeController@index');
-});
-Route::domain('localhost')->group(function (){
-    Route::get('/','HomeController@index');
-});
-Route::domain('{account}.'.'localhost')->group(function ($account) {
-    Route::get('/','HomeController@fan');
-});
-Route::get('/active/{id}','HomeController@show');
+//Route::domain('localhost')->group(function (){
+//    Route::get('/','HomeController@index');
+//});
+//Route::domain('localhost')->group(function (){
+//    Route::get('/','HomeController@index');
+//});
+//Route::domain('{account}.'.'localhost')->group(function ($account) {
+//    Route::get('/','HomeController@fan');
+//});
+//Route::get('/active/{id}','HomeController@show');
 
 
 
