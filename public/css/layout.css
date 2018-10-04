@@ -1,7 +1,7 @@
 @font-face {
     font-family: fontello;
-    src: url(/static/fonts/fontello.146ffcc.eot);
-    src: url(/static/fonts/fontello.146ffcc.eot#iefix) format("embedded-opentype"), url(/static/img/fontello.72568b5.svg#fontello) format("svg");
+    src: url(https://tian.yam.com/static/fonts/fontello.146ffcc.eot);
+    src: url(https://tian.yam.com/static/fonts/fontello.146ffcc.eot#iefix) format("embedded-opentype"), url(https://tian.yam.com/static/img/fontello.72568b5.svg#fontello) format("svg");
     font-weight: 400;
     font-style: normal
 }

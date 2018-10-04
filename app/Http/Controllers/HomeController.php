@@ -54,9 +54,11 @@ class HomeController extends Controller
     }
 
     function show($id){
+
         $active = Active::where(['id'=>$id])->get()->toArray();
 //        dd($active[0]['admin']);
         $admin = Admin::where(['admin'=>$active[0]['admin']])->get()->toArray();
+        dd($admin);
         $actives = Active::where(['typeid'=>$active[0]['typeid']])->take(9)->get();
         $host = $this->domain;
         return view('show',compact('active','host','admin','actives'));

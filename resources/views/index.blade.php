@@ -6,12 +6,12 @@
 
 
 
-    <title>天空部落 TIAN</title>
+    <title>旅游分享平台_天空部落 TIAN</title>
 
 
-    <meta name="title" content="天空部落 TIAN">
+    <meta name="title" content="旅游分享平台_天空部落 TIAN">
     <meta name="description" content="天空部落專為您設計的創作平台，網誌、相簿、社群等，我們通通都有！">
-    <meta name="keywords" content="部落格、創作平台，網誌、相簿、社群">
+    <meta name="keywords" content="旅游分享平台,海外旅游,沿海地区旅游,台湾旅游,部落格、創作平台，網誌、相簿、社群">
     <meta name="robots" content="index,follow">
 
     <link href="{{asset('css/layout.css')}}" rel="stylesheet">
@@ -20,6 +20,20 @@
     var JSVAR = {"environment": {"isMobile": false}, "client": {"isGuest": true, "isBlogger": false}};</script>
 
     <style></style>
+    <script>
+        (function(){
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            }
+            else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+    </script>
 </head>
 
 <body id="theme0" class="">
@@ -27,13 +41,13 @@
 
 <div serverno="0">
     <header class="site-header">
-        <nav id="site-header__bar" class="site-header__bar"><a href="https://tian.yam.com/#" class="site-header__brand"><img
+        <nav id="site-header__bar" class="site-header__bar"><a href="https://www.sce33.cn" class="site-header__brand"><img
                 src="{{asset('images/blog_logo.png')}}" alt=""></a>
 
         </nav>
         <div class="theme-tabs"><!---->
             <ul id="theme-tab" class="theme-tabs__tabs theme-tab">
-                <li><a href="http://{{$host}}" class="theme-tabs">
+                <li><a href="https://www.{{$host}}" class="theme-tabs">
                     首页
                 </a></li>
                 @foreach($lanmu as $value)
@@ -58,7 +72,7 @@
                                     {{$value->title}}
                                 </h3>
                                 <div>
-                                    <p>{{$value->desc}}</p>
+                                    <p>{!! $value->desc !!}</p>
                                 </div>
                                 </a>
                             </div>
@@ -69,16 +83,13 @@
                                 <span>
                                     <i class="icon-commenting theme-text"></i>0
                                 </span>
-                                <a href="/active/{{$value->id}}" target="_blank">{{$value->admin}}</a>
+                                <a href="/active/{{$value->id}}" target="_blank">{!! $value->admin !!}</a>
                             </div>
                         </div>
                         @endforeach
                     </div>
                 </div> <!---->
-                <div class="pageWidget__tool"><a href="https://tian.yam.com/#" draggable="true"><i
-                        class="icon-move"></i></a> <a href="https://tian.yam.com/#" class="btn--edit"><i
-                        class="icon-pencil"></i></a> <a href="https://tian.yam.com/#"><i class="icon-plus-add"></i></a>
-                    <a href="https://tian.yam.com/#"><i class="icon-minus"></i></a></div>
+
             </div>
             <div class="pageWidget"><!---->
                 <div id="widget-uid-157" class="avatarSlider wg--form" allow="drop" index="1">
@@ -91,7 +102,7 @@
                                     <div class="thumb-head">
                                         <img src="./images/{{$value->ename}}.jpg" alt="" style="background-image: url(&quot;https://cdn-tian.yam.com/2/8/2851029/image/jpeg/2018/05/15/5afa549d2fe02.jpg&quot;);">
                                     </div>
-                                    <div>{{$value->admin}}</div>
+                                    <div>{!! $value->admin !!}</div>
                                     </a>
                                     @endforeach
                                 </div>
@@ -109,7 +120,7 @@
                             <div class="borderSummary">
                                 <a href="/active/{{$value->id}}">
                                     <h3>{{$value->title}}</h3>
-                                <p>{{$value->desc}}</p>
+                                <p>{!! $value->desc !!}</p>
                                 </a>
                             </div>
                         </div>
@@ -117,10 +128,7 @@
 
                     </div>
                 </div> <!---->
-                <div class="pageWidget__tool"><a href="https://tian.yam.com/#" draggable="true"><i
-                        class="icon-move"></i></a> <a href="https://tian.yam.com/#" class="btn--edit"><i
-                        class="icon-pencil"></i></a> <a href="https://tian.yam.com/#"><i class="icon-plus-add"></i></a>
-                    <a href="https://tian.yam.com/#"><i class="icon-minus"></i></a></div>
+
             </div>
             <div class="pageWidget"><!---->
                 <div id="widget-uid-163" class="tripleCoverage wg--form" allow="drop" index="3">
@@ -136,7 +144,7 @@
                                     {{$value->title}}
                                 </h3>
                                 <div>
-                                    <p>{{$value->desc}}</p>
+                                    <p>{!! $value->desc !!}</p>
                                 </div>
                                 </a>
                             </div>
@@ -147,7 +155,7 @@
                                 <span>
                                     <i class="icon-commenting theme-text"></i>0
                                 </span>
-                                <a href="/active/{{$value->id}}" target="_blank">{{$value->admin}}</a>
+                                <a href="/active/{{$value->id}}" target="_blank">{!! $value->admin !!}</a>
                             </div>
                         </div>
                         @endforeach
@@ -163,7 +171,7 @@
                             <div class="borderSummary">
                                 <a href="/active/{{$value->id}}">
                                 <h3>{{$value->title}}</h3>
-                                <p>{{$value->desc}}</p>
+                                <p>{!! $value->desc !!}</p>
                                 </a>
                             </div>
                         </div>
@@ -178,18 +186,18 @@
             <!--<ul>-->
                 <!--<li><a href="https://tian.yam.com/signup?action=signup" target="_blank" title=""-->
                        <!--ga-category="Home/index" ga-label="Footer/免費註冊/member">免費註冊</a></li>-->
-                <!--<li><a href="http://member.yam.com/Notice/?duty.htm" target="_blank" title="" ga-category="Home/index"-->
+                <!--<li><a href="https://member.yam.com/Notice/?duty.htm" target="_blank" title="" ga-category="Home/index"-->
                        <!--ga-label="Footer/服務條款/member">服務條款</a></li>-->
-                <!--<li><a href="http://member.yam.com/Notice/?privacy.htm" target="_blank" title=""-->
+                <!--<li><a href="https://member.yam.com/Notice/?privacy.htm" target="_blank" title=""-->
                        <!--ga-category="Home/index" ga-label="Footer/隱私權政策/member">隱私權政策</a></li>-->
-                <!--<li><a href="http://member.yam.com/SiteMap/?Type=1" target="_blank" title="" ga-category="Home/index"-->
+                <!--<li><a href="https://member.yam.com/SiteMap/?Type=1" target="_blank" title="" ga-category="Home/index"-->
                        <!--ga-label="Footer/網站導覽/member">網站導覽</a></li>-->
-                <!--<li><a href="http://help.yam.com/" target="_blank" title="" ga-category="Home/index"-->
+                <!--<li><a href="https://help.yam.com/" target="_blank" title="" ga-category="Home/index"-->
                        <!--ga-label="Footer/服務中心/member">服務中心</a></li>-->
                 <!--<li>-->
-                    <!--<a href="http://help.yam.com/m/D21E22D0995A13158474FEB3442D7454C1CBB80DBABF567B950CC33AD56937E00713F2F9229FC23376F08A14C6D3F28D805A1A5AB0AF67C6F0C25339AF4D654E5334DA2C5EFED4393AD9EA94EDC39E1346F17B9A28BC6930"-->
+                    <!--<a href="https://help.yam.com/m/D21E22D0995A13158474FEB3442D7454C1CBB80DBABF567B950CC33AD56937E00713F2F9229FC23376F08A14C6D3F28D805A1A5AB0AF67C6F0C25339AF4D654E5334DA2C5EFED4393AD9EA94EDC39E1346F17B9A28BC6930"-->
                        <!--target="_blank" title="" ga-category="Home/index" ga-label="Footer/聯絡我們/member">聯絡我們</a></li>-->
-                <!--<li><a href="http://value.yam.com/" target="_blank" title="" ga-category="Home/index"-->
+                <!--<li><a href="https://value.yam.com/" target="_blank" title="" ga-category="Home/index"-->
                        <!--ga-label="Footer/行銷合作/member">行銷合作</a></li>-->
             <!--</ul>-->
         </nav>

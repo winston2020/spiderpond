@@ -614,7 +614,7 @@
     <header id="header">
         <div class="container">
             <div class="content-wrap">
-                <a class="logo" href="http://{{$host}}">
+                <a class="logo" href="https://www.{{$host}}">
                     <img class="img-responsive" src="{{asset('images/blog_logo.png')}}" height="41" width="91" alt="天空部落">
                 </a>
 
@@ -808,23 +808,23 @@
                         {{--<a href="https://tian.yam.com/signup?action=signup" target="_blank" title="">免費註冊</a>--}}
                     {{--</li>--}}
                     {{--<li>--}}
-                        {{--<a href="http://member.yam.com/Notice/?duty.htm" target="_blank" title="">服務條款</a>--}}
+                        {{--<a href="https://member.yam.com/Notice/?duty.htm" target="_blank" title="">服務條款</a>--}}
                     {{--</li>--}}
                     {{--<li>--}}
-                        {{--<a href="http://member.yam.com/Notice/?privacy.htm" target="_blank" title="">隱私權政策</a>--}}
+                        {{--<a href="https://member.yam.com/Notice/?privacy.htm" target="_blank" title="">隱私權政策</a>--}}
                     {{--</li>--}}
                     {{--<li>--}}
-                        {{--<a href="http://member.yam.com/SiteMap/?Type=1" target="_blank" title="">網站導覽</a>--}}
+                        {{--<a href="https://member.yam.com/SiteMap/?Type=1" target="_blank" title="">網站導覽</a>--}}
                     {{--</li>--}}
                     {{--<li>--}}
-                        {{--<a href="http://help.yam.com/" target="_blank" title="">服務中心</a>--}}
+                        {{--<a href="https://help.yam.com/" target="_blank" title="">服務中心</a>--}}
                     {{--</li>--}}
                     {{--<li>--}}
-                        {{--<a href="http://help.yam.com/m/D21E22D0995A13158474FEB3442D7454C1CBB80DBABF567B950CC33AD56937E00713F2F9229FC23376F08A14C6D3F28D805A1A5AB0AF67C6F0C25339AF4D654E5334DA2C5EFED4393AD9EA94EDC39E1346F17B9A28BC6930"--}}
+                        {{--<a href="https://help.yam.com/m/D21E22D0995A13158474FEB3442D7454C1CBB80DBABF567B950CC33AD56937E00713F2F9229FC23376F08A14C6D3F28D805A1A5AB0AF67C6F0C25339AF4D654E5334DA2C5EFED4393AD9EA94EDC39E1346F17B9A28BC6930"--}}
                            {{--target="_blank" title="">聯絡我們</a>--}}
                     {{--</li>--}}
                     {{--<li>--}}
-                        {{--<a href="http://value.yam.com/" target="_blank" title="">行銷合作</a>--}}
+                        {{--<a href="https://value.yam.com/" target="_blank" title="">行銷合作</a>--}}
                     {{--</li>--}}
                 {{--</ul>--}}
                 <div class="clearfix"></div>

@@ -25,13 +25,13 @@
 //Route::get('/sp','SpiderController@start');
 //Route::get('/url','UrlController@getUrl');
 //Route::get('/demo','DemoController@start');
-Route::domain('twj33.cn')->group(function (){
+Route::domain('localhost')->group(function (){
     Route::get('/','HomeController@index');
 });
-Route::domain('www.twj33.cn')->group(function (){
+Route::domain('localhost')->group(function (){
     Route::get('/','HomeController@index');
 });
-Route::domain('{account}.'.'twj33.cn')->group(function ($account) {
+Route::domain('{account}.'.'localhost')->group(function ($account) {
     Route::get('/','HomeController@fan');
 });
 Route::get('/active/{id}','HomeController@show');

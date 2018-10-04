@@ -929,7 +929,7 @@
     <header id="header">
         <div class="container">
             <div class="content-wrap">
-                <a class="logo" href="http://{{$host}}">
+                <a class="logo" href="https://www.{{$host}}">
                     <img class="img-responsive" src="{{asset('images/blog_logo.png')}}" height="41" width="91"
                          alt="天空部落">
                 </a>

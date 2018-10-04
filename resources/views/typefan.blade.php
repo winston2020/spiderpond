@@ -42,13 +42,13 @@
 
 <div serverno="0">
     <header class="site-header">
-        <nav id="site-header__bar" class="site-header__bar"><a href="http://{{$host}}" class="site-header__brand"><img
+        <nav id="site-header__bar" class="site-header__bar"><a href="https://www.{{$host}}" class="site-header__brand"><img
                 src="./images/blog_logo.png" alt=""></a>
 
         </nav>
         <div class="theme-tabs"><!---->
             <ul id="theme-tab" class="theme-tabs__tabs theme-tab">
-                <li><a href="http://{{$host}}" class="theme-tabs">
+                <li><a href="https://www.{{$host}}" class="theme-tabs">
                     首页
                 </a></li>
                 @foreach($lanmu as $value)
@@ -85,8 +85,9 @@
             </div>
             <div class="pageWidget"><!---->
                 <div id="widget-uid-154" class="tripleCoverage wg--form" allow="drop" index="0">
-                    @foreach($actives as $value)
                     <div class="row">
+                    @foreach($actives as $value)
+
                         <div class="col-xs-12 col-sm-4">
 
                             <div class="tripleCoverage__body">
@@ -110,8 +111,9 @@
                             </div>
                         </div>
 
-                        </div>
                     @endforeach
+                    </div>
+
                 </div>
                 </div> <!---->
 
